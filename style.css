@@ -1,12 +1,14 @@
 :root {
     --primary-color: #ff4400;
     --bg-color: #000000;
-    --bg2-color: #0D0D0D;
+    --bg2-color: #ffffff14;
+    --bg3-color: #0d0d0d;
     --secondary-color: #ff50104d;
     --text-color: #ffffff;
     --text2-color: #ff5618;
     --text3-color: #ffffff99;
     --ternary-color: #262626;
+
 }
 
 * {
@@ -34,10 +36,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 2.5rem;
 }
 
 nav img {
-    width: 100px;
+    width: 125px;
     height: auto;
 }
 
@@ -52,20 +55,33 @@ nav menu {
 nav menu a {
     text-decoration: none;
     color: var(--text-color);
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 nav .get-started-btn {
     background: var(--bg2-color);
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
     color: var(--text-color);
     border-radius: 0.5rem;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+nav .get-started-btn:hover {
+    background-color: var(--primary-color);
+}
+
+nav .get-started-btn:active {
+    transform: scale(0.95);
+    background-color: var(--primary-color);
 }
 
 h1 {
     color: var(--text-color);
-    font-size: 4rem;
+    font-size: 16vw;
     text-align: center;
     width: 100%;
     padding-block: 2rem;
@@ -85,6 +101,7 @@ h1 {
     font-size: 0.8rem;
     border-radius: 2rem;
     color: var(--text-color);
+    cursor: pointer;
 }
 
 .keywords h4:first-child {
@@ -99,12 +116,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     padding-block: 2rem;
+    padding-inline: 4rem;
 }
 
 .card {
-    background-color: var(--bg2-color);
+    background-color: var(--bg3-color);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -146,7 +164,7 @@ h1 {
 }
 
 .card h5 {
-    color: var(--text-color);
+    color: var(--text3-color);
     font-size: 0.8rem;
 }
 
@@ -188,14 +206,43 @@ footer span {
     -webkit-background-clip: text;
 }
 
+@media (max-width:1024px) {
+    nav .get-started-btn {
+        padding-inline: 1rem;
+        padding-block: 0.8rem;
+        font-size: 1rem;
+    }
+
+    nav {
+        padding-inline: 1rem;
+    }
+
+    nav img {
+        width: 100px;
+    }
+
+    nav menu a {
+        font-size: 1rem;
+    }
+
+}
+
 @media (max-width:768px) {
     .cards {
         flex-wrap: wrap;
+        gap: 2rem;
     }
+
 }
 
 @media (max-width:640px) {
     nav menu {
         display: none;
     }
+
+    .keywords {
+        flex-wrap: wrap;
+    }
+
+
 }
