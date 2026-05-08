@@ -1,16 +1,201 @@
-/* CSS Boilerplate */
+:root {
+    --primary-color: #ff4400;
+    --bg-color: #000000;
+    --bg2-color: #0D0D0D;
+    --secondary-color: #ff50104d;
+    --text-color: #ffffff;
+    --text2-color: #ff5618;
+    --text3-color: #ffffff99;
+    --ternary-color: #262626;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: helvetica;
 }
+
 html,
 body {
     width: 100%;
     height: 100%;
+    background: var(--bg-color);
 }
-main{
-    height:100%;
-    width:100%
+
+main {
+    width: 100%;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+}
+
+nav menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+}
+
+nav menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+nav .get-started-btn {
+    background: var(--bg2-color);
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    color: var(--text-color);
+    border-radius: 0.5rem;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    padding-block: 2rem;
+}
+
+.keywords {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.keywords h4 {
+    background-color: var(--bg2-color);
+    padding-inline: 1.5rem;
+    padding-block: 1.2rem;
+    font-size: 0.8rem;
+    border-radius: 2rem;
+    color: var(--text-color);
+}
+
+.keywords h4:first-child {
+    background-color: var(--primary-color);
+}
+
+.keywords h4:hover {
+    background-color: var(--primary-color);
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-block: 2rem;
+}
+
+.card {
+    background-color: var(--bg2-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 1rem;
+    gap: 1rem;
+    width: calc(100vh - 4rem - 1rem);
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+}
+
+.card .content {
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card h4 {
+    background-color: var(--secondary-color);
+    font-size: 0.8rem;
+    border-radius: 1rem;
+    color: var(--text2-color);
+    padding-inline: 1.5rem;
+    padding-block: .75rem;
+
+}
+
+.card h2 {
+    color: var(--text-color);
+}
+
+.card h5 {
+    color: var(--text-color);
+    font-size: 0.8rem;
+}
+
+.separator-line {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.separator-line div {
+    width: 40%;
+    height: 1.8px;
+    background: var(--ternary-color);
+}
+
+.separator-line .ri-asterisk {
+    font-size: 2rem;
+    color: var(--ternary-color);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(rgb(0, 0, 0), rgb(255, 85, 24) 62.1846%, rgb(246, 179, 92) 100%, transparent);
+    padding-top: 2rem;
+}
+
+footer span {
+    font-size: 28vw;
+    font-weight: 750;
+    background: linear-gradient(#F1843C, #F7AD5A, transparent);
+    color: transparent;
+
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+@media (max-width:768px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:640px) {
+    nav menu {
+        display: none;
+    }
 }
