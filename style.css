@@ -81,7 +81,7 @@ nav .get-started-btn:active {
 
 h1 {
     color: var(--text-color);
-    font-size: 16vw;
+    font-size: 8vw;
     text-align: center;
     width: 100%;
     padding-block: 2rem;
@@ -128,24 +128,26 @@ h1 {
     align-items: flex-start;
     border-radius: 1rem;
     gap: 1rem;
-    width: calc(100vh - 4rem - 1rem);
+    width: 350px;
+    max-width: 350px;
+    min-width: 350px;
 }
 
 .card img {
     width: 100%;
+    aspect-ratio: 4/3;
     object-fit: cover;
     object-position: center;
     border-radius: 1rem;
 }
 
 .card .content {
-    padding-inline: 2rem;
-    padding-block: 1rem;
-    padding-bottom: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+    padding-left:1rem;
+    padding-bottom:1rem;
     gap: 1rem;
 }
 
@@ -154,9 +156,7 @@ h1 {
     font-size: 0.8rem;
     border-radius: 1rem;
     color: var(--text2-color);
-    padding-inline: 1.5rem;
-    padding-block: .75rem;
-
+    padding: 0.5rem;
 }
 
 .card h2 {
